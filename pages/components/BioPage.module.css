@@ -1,0 +1,51 @@
+.textColor{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    height: 200%;
+}
+
+.textColor h1{
+    font-size: 5vw;
+    font-family: "Russo One", sans-serif;
+    font-style: normal;
+    margin-top: 5vw;
+    text-decoration: none;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vw;
+    font-style:normal;
+    width: 50%;
+    height: 15vw;
+    gap: 2vw;
+    margin: 0;
+    text-decoration: underline;
+    /* align-items: center; */
+    /* margin-top: 2vw; */
+    /* margin-bottom: 1vw; */
+}
+
+.list li{
+    text-decoration: bold;
+}
+
+.description{
+    /* display: flex; */
+    width: 50%;
+    font-size: 1.5vw;
+    line-height: 3vw;
+    height: 100rem;
+}
+
+.description a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ff4545;
+}
+
