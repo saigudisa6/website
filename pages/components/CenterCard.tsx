@@ -22,8 +22,8 @@ const CenterCard = () => {
                     </div>
                     <div className={`${styles.icons}`}>
                         <a  href="https://www.linkedin.com/in/venkatasai-gudisa/" target="_blank"><FaLinkedin /></a>
-                        <a href='https://github.com/saigudisa6'><FaGithubSquare /></a>
-                        <a href='https://www.instagram.com/sai_the_g/'><FaSquareInstagram /></a>
+                        <a href='https://github.com/saigudisa6' target='_blank'><FaGithubSquare /></a>
+                        <a href='https://www.instagram.com/sai_the_g/' target='_blank'><FaSquareInstagram /></a>
                     </div>
                 </div>
                 <div className={`${styles.rightside}`}></div>
