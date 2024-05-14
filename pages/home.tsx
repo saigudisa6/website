@@ -1,4 +1,4 @@
-import {CenterCard} from './components/CenterCard'
+import CenterCard from './components/CenterCard'
 
 const Home = () => {
     return(
