@@ -144,15 +144,15 @@
     }
 
     .name{
-        font-size: 5vw;
+        font-size: 10vw;
     }
 
     .tag{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .icons a{
-        padding:1vw;
+        padding-right:1vw;
     }
     
 }

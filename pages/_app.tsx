@@ -1,21 +1,12 @@
 // pages/_app.js
-
-import Home from './home'; // Import the homepage component
 import './styles/global.css';
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps, router }) {
-    // Conditionally render the homepage component based on the route
-    const isHomePage = router.pathname === '/';
+// { Component, pageProps, router }
+
+function MyApp({ Component, pageProps }: AppProps) {
     
-    return (
-        <>
-            {isHomePage ? (
-                <Home {...pageProps} />
-            ) : (
-                <Component {...pageProps} />
-            )}
-        </>
-    );
+    return <Component {...pageProps} />;
 }
 
 export default MyApp;

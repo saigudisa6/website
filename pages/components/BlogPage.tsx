@@ -2,7 +2,7 @@ import styles from './BlogPage.module.css';
 
 const BlogPage = () => {
     return(
-        <h1 className={styles.nothingPage}>Stay Tuned for the Blog!</h1>
+        <h1 className={styles.nothingPage}>Blog Coming Soon!</h1>
     )
 }
 

@@ -8,6 +8,8 @@
     gap: 2vw;
 }
 
+
+
 @media(max-width: 450px){
     .projectsContainer{
         width: 100%;

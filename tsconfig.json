@@ -26,9 +26,11 @@
     "esModuleInterop": true
   },
   "include": [
-    "pages",
+    "**/*.ts",
+    "**/*.tsx",
     "src/App.tsx",
-    "src/main.tsx"
+    "src/main.tsx",
+
   ],
   "references": [
     {
