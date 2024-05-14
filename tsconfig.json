@@ -28,8 +28,6 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "src/App.tsx",
-    "src/main.tsx",
 
   ],
   "references": [
