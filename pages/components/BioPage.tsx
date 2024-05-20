@@ -13,7 +13,7 @@ const BioPage = () => {
                     Hello there! My name is Venkatasai Gudisa (Sai) for short. 
                     I'm a student at the University of Texas at Dallas studying Computer Science.
                     I began coding when I was a junior in high school with Java as my first language. 
-                    Although I wasn't too taken by it at first, it would soo turn into my entire life. 
+                    Although I wasn't too taken by it at first, it would soon turn into my entire life. 
                     From weekend coding contests to weekly tutoring to routine leetcoding, I was fully emersed in the world of Java.
                     <br/>
                     <br/>
