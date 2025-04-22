@@ -16,8 +16,6 @@ const CenterCard = () => {
                     </div>
                     <div className={`${styles.links}`}>
                         <Link className={`${styles.navlink} ${styles.promptRegular}`} href='/projects'>projects</Link>
-                        <Link className={`${styles.navlink} ${styles.promptRegular}`} href='/blog'>blog</Link>
-                        <Link className={`${styles.navlink} ${styles.promptRegular}`} target='_blank' href='https://clovlog.com'>clov</Link>
                         <Link className={`${styles.navlink} ${styles.promptRegular}`} href='/bio'>BIO</Link>
                     </div>
                     <div className={`${styles.icons}`}>
