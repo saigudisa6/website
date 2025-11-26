@@ -23,7 +23,7 @@
     color: #ff4545;
 }
 
-@media(max-width: 450px){
+@media(max-width: 1080px){
     .card{
         height: 70vw;
         width: 80vw;

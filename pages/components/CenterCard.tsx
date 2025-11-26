@@ -12,7 +12,7 @@ const CenterCard = () => {
                 <div className={`${styles.leftside}`}>
                     <div>
                         <div className={`${styles.name} ${styles.russoOneRegular}`}>VENKATA<span className={styles.shortname}>SAI</span> GUDISA</div>
-                        <div className={`${styles.tag} ${styles.russoOneRegular}`}>Building software that makes life better.</div>
+                        <div className={`${styles.tag} ${styles.russoOneRegular}`}>Software Engineer Intern at Meta and LinkedIn.</div>
                     </div>
                     <div className={`${styles.links}`}>
                         <Link className={`${styles.navlink} ${styles.promptRegular}`} href='/projects'>projects</Link>

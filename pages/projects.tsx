@@ -12,8 +12,14 @@ export interface Project{
 const Projects = () => {
     const projects: Project[] = [
         {
+            name: "FirstConnect (AWS Hackathon Winner)",
+            description: "Use agentic AI and AWS services to detect issues, simulate outages, and automatically open tickets, reducing manual effort and speeding up resolution.",
+            href: "https://github.com/rithikagantla/FirstConnect"
+        },
+
+        {
             name: "Dream",
-            description: "A distributed streaming platform based on P2P message transfer built atop a Kademlia DHT",
+            description: "A distributed streaming platform based on P2P message transfer built atop a Kademlia DHT to ensure low-latency, high-throughput data transmission.",
             href: 'https://github.com/kamui-fin/dream'
         },
 

@@ -5,16 +5,23 @@ const BioPage = () => {
         <div className={`${styles.textColor}`}>
                 <h1 className={styles.russoOneRegular}>SAI GUDISA</h1>
                 <ul className={styles.list}>
-                    <li>Summer '25 SWE Intern @ LinkedIn</li>
-                    <li>Interested in Distributed Systems, Machine Learning, and Data Science</li>
+                    <li>SWE Intern @ Meta and LinkedIn</li>
+                    <li>Interested in AI and Distributed Systems</li>
                     <li>Love Basketball and Movies</li>
                 </ul>
                 <p className={styles.description}>
-                    Hello there! My name is Venkatasai Gudisa (Sai) for short. 
-                    I'm a student at the University of Texas at Dallas studying Computer Science.
-                    I began coding when I was a junior in high school with Java as my first language. 
+                    Hello there! My name is Venkatasai Gudisa (Sai for short). 
+                    I'm a student at the University of Texas at Dallas studying Computer Science who wants to create impactful software that solves real problems.
 
                     <br/>
+                    <br/>
+
+                    After numerous projects and a summer at the heart of the tech world, I've gained a multi-dimensional view of technology and its applications.
+                    As I keep learning and growing, I'm excited to use my skills to build software that solves your problems.
+
+                    <br/>
+
+                    {/* <br/>
                     <br/>
                     <b className={styles.subhead}>
                         Pre-University
@@ -65,7 +72,7 @@ const BioPage = () => {
 
                     Although I didn't branch into any new concepts like I did in year 1, I loved building on my understanding and practicing what I was learning.
                     On that theme, as the year came to an end, I started focusing more on preparing for my internship, which will involve a lot of Rust and Go programming. 
-                    I'm incredibly grateful that I get to prusue my passion of distributed systems programming at my internship and am very excited for the summer.
+                    I'm incredibly grateful that I get to prusue my passion of distributed systems programming at my internship and am very excited for the summer. */}
                 </p>
         </div>
     )
