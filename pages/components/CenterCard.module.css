@@ -6,13 +6,41 @@
     color: white;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    position: relative; /* allow z-index stacking for children */
+    overflow: visible; /* avoid clipping the headshot */
 }
 
+/* === HEADSHOT: cropping helper variables ===
+     To adjust the crop / position of your headshot, change the
+     `--headshot-position` Y value below. Examples:
+         - `--headshot-position: center -6%` moves the image up a little
+         - `--headshot-position: center -12%` moves it up more
+         - `--headshot-position: center 10%` moves it down
+     For different desktop vs mobile crops, change the variables inside
+     `.rightside` for desktop and `.rightsideMobile` for mobile.
+*/
 .rightside{
-    background-image: url('/headshot.jpg');
-    background-size: 150%;
-    background-position: center top;
+        --headshot-position: center -6%; /* default desktop crop: small upward shift */
+        --headshot-size: 150%; /* keep the image covering the area (cropped) */
+        background-image: url('/headshot.jpg');
+        background-size: var(--headshot-size);
+        background-position: var(--headshot-position);
+    background-repeat: no-repeat;
     margin: 1em;
+    position: relative; /* for z-index to work */
+    z-index: 1;
+}
+
+/* mobile-only rightside that sits inside the left column */
+.rightsideMobile{
+    display:none; /* hidden by default; shown in media query */
+    /* default mobile crop — adjust the Y value to crop more/less */
+    --headshot-mobile-position: center -7%;
+    --headshot-mobile-size: cover; /* `cover` will crop; `contain` will show whole image */
+    background-image: url('/headshot.jpg');
+    background-size: var(--headshot-mobile-size);
+    background-position: var(--headshot-mobile-position);
+    background-repeat: no-repeat;
 }
 
 .permanent-marker-regular {
@@ -53,6 +81,16 @@
     font-size: .4em;
     font-weight: .5em;
     color: gray;
+}
+
+/* brand-colored highlights for subtitle */
+.meta{
+    color: #1877f2; /* Meta / Facebook-ish blue */
+    font-weight: 600;
+}
+.linkedin{
+    color: #0a66c2; /* LinkedIn brand blue */
+    font-weight: 600;
 }
 
 .navlink {
@@ -119,42 +157,73 @@
         display:flex;
         flex-direction: column;
         justify-content:center;
-        width: 80%;
-        height: 80%;
+        align-items: center; /* ensure children are centered */
+        width: 70%; /* reduce size on mobile */
+        max-width: 36rem; /* avoid huge cards on larger mobile widths */
+        height: auto; /* let card size to content so socials don't get large gaps */
     }
 
     .leftside{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        gap: 0;
+        /* use grid inside left column to align name, image, links, and socials */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-auto-rows: auto;
+        /* grid handles layout - avoid space-between which creates big gaps */
+        justify-content: start;
+        height: auto; /* fit to content */
+        gap: 3rem; /* increase spacing between stacked rows (more breathing room) */
+        width: 100%;
+        align-items: flex-start; /* left-align content under the image */
+        position: relative; /* for z-index */
+        z-index: 1; /* keep leftside below the headshot */
+        padding: 0.5rem 1rem; /* left and right padding to align content */
+        box-sizing: border-box;
     }
 
-    .rightside{
-        height:0;
-        margin:0;
-    }
+    /* hide desktop rightside on small screens; show mobile one inside left column */
+    .rightside{ display:none; }
+    .rightsideMobile{ display:block; width: 12rem; height: 12rem; max-height: 12rem; border-radius:6px; overflow:hidden; justify-self: start; margin-top: 1rem; }
 
     .links{
         display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        /* align-items: center; */
-        height: 50%;
+        flex-direction: column; /* keep vertical */
+        justify-content: flex-start; /* avoid extra vertical spacing */
+        align-items: flex-start;
+        gap: 2rem; /* slightly larger gap between nav links */
+        height: auto;
+        width: 100%; /* take full width below the image */
+        grid-column: 1;
+        grid-row: 3;
     }
 
     .name{
-        font-size: 10vw;
+        font-size: 5.5vw; /* slightly smaller name for tighter layout */
+        width: 100%;
+        text-align: left; /* make sure name aligns with nav links */
     }
 
     .tag{
-        font-size: 3vw;
+        font-size: 1.8vw; /* smaller subtitle on small screens */
+        width: 100%;
+        text-align: left;
     }
 
     .icons a{
-        padding-right:1vw;
+        padding-right: .6rem; /* small spacing between icons */
     }
+    /* .icons{ margin-top: 1.5rem; margin-bottom: 0rem; } */
+    /* place name in row 1 */
+    .leftside > div:nth-child(1){ grid-column: 1; grid-row: 1; }
+    /* place mobile image in row 2 */
+    .leftside > .rightsideMobile { grid-column: 1; grid-row: 2; }
+    /* place links in row 3 */
+    .leftside > .links { grid-column: 1; grid-row: 3; }
+    /* place socials row in row 4 */
+    .leftside > .icons { grid-column: 1; grid-row: 4; justify-self: start; margin-top: 1.5rem; }
+
+    /* reduce navlink text size on small screens */
+    .navlink{ font-size: 0.4em; }
     
 }
 

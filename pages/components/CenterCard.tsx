@@ -12,8 +12,12 @@ const CenterCard = () => {
                 <div className={`${styles.leftside}`}>
                     <div>
                         <div className={`${styles.name} ${styles.russoOneRegular}`}>VENKATA<span className={styles.shortname}>SAI</span> GUDISA</div>
-                        <div className={`${styles.tag} ${styles.russoOneRegular}`}>Software Engineer Intern at Meta and LinkedIn.</div>
+                        <div className={`${styles.tag} ${styles.russoOneRegular}`}>
+                            Software Engineer Intern at <span className={styles.meta}>Meta</span> and <span className={styles.linkedin}>LinkedIn</span>.
+                        </div>
                     </div>
+                    {/* mobile-only rightside (duplicate of the desktop rightside but shown on small screens) */}
+                    <div className={`${styles.rightsideMobile}`}></div>
                     <div className={`${styles.links}`}>
                         <Link className={`${styles.navlink} ${styles.promptRegular}`} href='/projects'>projects</Link>
                         <Link className={`${styles.navlink} ${styles.promptRegular}`} href='/bio'>BIO</Link>
