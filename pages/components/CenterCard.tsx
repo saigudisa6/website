@@ -6,7 +6,7 @@ import { FaGithubSquare } from "react-icons/fa";
 
 const CenterCard = () => {
 
-    return(
+    return (
         <div className={`${styles.cardContainer}`}>
             <div className={`${styles.card}`}>
                 <div className={`${styles.leftside}`}>
@@ -23,9 +23,9 @@ const CenterCard = () => {
                         <Link className={`${styles.navlink} ${styles.promptRegular}`} href='/bio'>BIO</Link>
                     </div>
                     <div className={`${styles.icons}`}>
-                        <a  href="https://www.linkedin.com/in/venkatasai-gudisa/" target="_blank"><FaLinkedin /></a>
+                        <a href="https://www.linkedin.com/in/venkatasai-gudisa/" target="_blank"><FaLinkedin /></a>
                         <a href='https://github.com/saigudisa6' target='_blank'><FaGithubSquare /></a>
-                        <a href='https://www.instagram.com/sai_the_g/' target='_blank'><FaSquareInstagram /></a>
+                        <a href='https://www.instagram.com/saigudisa/' target='_blank'><FaSquareInstagram /></a>
                     </div>
                 </div>
                 <div className={`${styles.rightside}`}></div>
